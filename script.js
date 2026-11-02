@@ -36,9 +36,9 @@
           event_label: label,
           page_path: window.location.pathname,
         });
-        // Conversão Google Ads: "Contato WhatsApp - site" (ação primária)
+        // Conversão Google Ads: "Clique no WhatsApp - Site" (ação primária, criada em 02/11/2026)
         gtag("event", "conversion", {
-          send_to: "AW-17392436920/AjEoCPq4zeccELiNruVA",
+          send_to: "AW-17392436920/mNgkCOHTr7AdELiNruVA",
         });
       }
     });
