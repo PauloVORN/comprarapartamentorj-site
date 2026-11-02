@@ -295,6 +295,25 @@ footer a.flink{ color:var(--gold-light); }
 /* ---------- Breadcrumb / back ---------- */
 .back-link{ display:inline-flex; align-items:center; gap:6px; font-size:.82rem; color:var(--gold-light); font-weight:600; }
 
+/* ---------- Landing de campanha (ilha-stay) ---------- */
+.lp-aviso{ font-size:.72rem; color:#8fa0b0; margin:14px 0 0; max-width:62ch; }
+.lp-aviso--dark{ color:var(--text-light); margin-top:16px; }
+.lp-steps{ grid-template-columns:1fr; }
+@media(min-width:700px){ .lp-steps{ grid-template-columns:repeat(3,1fr); } }
+.lp-steps .diff-card h4{ font-size:1rem; margin-bottom:6px; }
+.lp-steps .diff-card p{ font-size:.9rem; }
+.lp-outros{ font-size:.92rem; }
+/* destaque da campanha na home */
+.destaque{
+  display:flex; flex-direction:column; gap:14px; margin-bottom:26px; padding:22px 20px;
+  background:linear-gradient(135deg,var(--navy),var(--navy-soft)); color:#fff; border-radius:20px;
+  box-shadow:var(--shadow); border:1px solid rgba(201,162,39,.45);
+}
+@media(min-width:700px){ .destaque{ flex-direction:row; align-items:center; justify-content:space-between; padding:26px 28px; } }
+.destaque h3{ margin:6px 0 4px; font-size:1.3rem; }
+.destaque p{ margin:0; color:#c6d0d9; font-size:.92rem; max-width:56ch; }
+.destaque .badge-gold{ display:inline-block; }
+
 /* ---------- Utilities ---------- */
 .mt-0{ margin-top:0; }
 .gap-sm{ gap:8px; }
