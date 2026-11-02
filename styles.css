@@ -303,6 +303,12 @@ footer a.flink{ color:var(--gold-light); }
 .lp-steps .diff-card h4{ font-size:1rem; margin-bottom:6px; }
 .lp-steps .diff-card p{ font-size:.9rem; }
 .lp-outros{ font-size:.92rem; }
+.lp-intro{ max-width:66ch; margin-bottom:22px; }
+.lp-video video{ width:100%; max-width:860px; margin:0 auto; display:block; border-radius:var(--radius); background:#000; box-shadow:var(--shadow); }
+.lp-galeria{ grid-template-columns:1fr 1fr; }
+@media(min-width:700px){ .lp-galeria{ grid-template-columns:repeat(4,1fr); } }
+.lp-planta-img{ width:100%; height:auto; border-radius:var(--radius-sm); border:1px solid var(--border); background:#f3efe4; }
+.lp-faixa img{ width:100%; height:auto; max-height:360px; object-fit:cover; display:block; }
 /* destaque da campanha na home */
 .destaque{
   display:flex; flex-direction:column; gap:14px; margin-bottom:26px; padding:22px 20px;
