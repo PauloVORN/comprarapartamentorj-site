@@ -204,6 +204,7 @@ p{ margin:0 0 1em; color:var(--text-light); }
   display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.4rem; color:var(--navy-dark);
   flex:none;
 }
+img.corretora-avatar{ width:88px; height:88px; object-fit:cover; object-position:center top; border:3px solid var(--gold); background:none; }
 .corretora-box h3{ margin-bottom:4px; }
 .corretora-box p{ color:#c6d0d9; margin-bottom:14px; }
 .corretora-meta{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
