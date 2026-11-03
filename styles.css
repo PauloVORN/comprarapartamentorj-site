@@ -326,3 +326,12 @@ footer a.flink{ color:var(--gold-light); }
 .gap-sm{ gap:8px; }
 .text-white{ color:#fff; }
 .tag-row{ display:flex; flex-wrap:wrap; gap:10px; }
+
+/* ---------- Filtro da lista de empreendimentos ---------- */
+.filtros{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 20px; }
+.filtros button{
+  font:inherit; font-size:.84rem; font-weight:600; cursor:pointer;
+  padding:9px 16px; border-radius:999px; border:1px solid var(--border); background:var(--white); color:var(--navy-dark);
+}
+.filtros button.is-on{ background:var(--navy-dark); border-color:var(--navy-dark); color:#fff; }
+.emp-card[hidden]{ display:none; }

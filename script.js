@@ -56,4 +56,20 @@
       }
     });
   });
+
+  // Filtro por região / tipo na lista de empreendimentos da home.
+  var botoes = document.querySelectorAll("[data-filtro-btn]");
+  botoes.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var f = b.getAttribute("data-filtro-btn");
+      botoes.forEach(function (x) { x.classList.toggle("is-on", x === b); });
+      document.querySelectorAll("#grid-emp .emp-card").forEach(function (c) {
+        var tags = (c.getAttribute("data-filtro") || "").split(" ");
+        c.hidden = !(f === "todos" || tags.indexOf(f) > -1);
+      });
+      if (typeof gtag === "function") {
+        gtag("event", "filtro_empreendimentos", { event_category: "navegacao", event_label: f });
+      }
+    });
+  });
 })();
