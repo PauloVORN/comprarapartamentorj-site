@@ -1,6 +1,6 @@
 # Crisla Souza | Corretora de Imóveis RJ
 
-> Site da corretora de imóveis Crisla Souza (CRECI-RJ 96301), que comercializa empreendimentos da Riva Incorporadora (empresa do Grupo Direcional) no Rio de Janeiro e região: Barra Olímpica, Recreio dos Bandeirantes, Jacarepaguá, Porto Maravilha, Zona Norte e Nova Iguaçu. Atendimento pelo WhatsApp das 8h às 22h, com resposta em até 10 minutos.
+> Site da corretora de imóveis Crisla Souza (CRECI-RJ 96301), que comercializa empreendimentos da Riva Incorporadora (empresa do Grupo Direcional) no Rio de Janeiro e região: Barra Olímpica, Recreio dos Bandeirantes, Jacarepaguá, Porto Maravilha, Zona Norte e Nova Iguaçu. Atendimento pelo WhatsApp.
 
 Valores, prazos de entrega e condições são de referência e sujeitos a alteração pela incorporadora. Para a tabela atual, o contato é a própria corretora.
 
@@ -23,7 +23,7 @@ Valores, prazos de entrega e condições são de referência e sujeitos a altera
 - [Ilhamar Beach e Home](https://comprarapartamentorj.com.br/imoveis/ilhamar-beach-home.html): Barra Olímpica, 2 e 3 quartos, 54 a 90 m².
 - [Marine Barra Residence](https://comprarapartamentorj.com.br/imoveis/marine-barra-residence.html): Barra Olímpica, 2 e 3 quartos, obras avançadas.
 - [Oceanside Recreio](https://comprarapartamentorj.com.br/imoveis/oceanside-recreio.html): Recreio dos Bandeirantes, 2 e 3 quartos, obras avançadas.
-- [Vibe Sunset](https://comprarapartamentorj.com.br/imoveis/vibe-sunset.html): Recreio dos Bandeirantes, 1, 2 e 3 quartos, obras avançadas.
+- [Vibe Sunset](https://comprarapartamentorj.com.br/imoveis/vibe-sunset.html): Recreio dos Bandeirantes, 1, 2 e 3 quartos, pronto para morar.
 - [Villa Santé](https://comprarapartamentorj.com.br/imoveis/villa-sante.html): Pechincha, Jacarepaguá, 1 e 2 quartos, até 65 m².
 - [Origem Porto Imperial](https://comprarapartamentorj.com.br/imoveis/origem-porto-imperial.html): São Cristóvão (Porto Maravilha), 2 e 3 quartos.
 - [Gentileza BeOn Porto](https://comprarapartamentorj.com.br/imoveis/gentileza-beon-porto.html): São Cristóvão (Porto Maravilha), 1 e 2 quartos.
