@@ -43,7 +43,7 @@
   // Microsoft Clarity (mapas de calor e gravações). Fica desligado enquanto o ID estiver vazio.
   // Não carrega se o navegador sinaliza "não rastrear" e só começa depois da página pronta,
   // para não pesar no carregamento.
-  var CLARITY_ID = "";
+  var CLARITY_ID = "z8jsfcwh5j";
   try {
     var naoRastrear = navigator.doNotTrack === "1" || window.doNotTrack === "1" || navigator.globalPrivacyControl === true;
     if (CLARITY_ID && !naoRastrear && !semRastreio) {
