@@ -339,7 +339,8 @@ footer a.flink{ color:var(--gold-light); }
 /* ---------- Landing Ilha Stay: botao principal antes da dobra no celular ---------- */
 .hero-lp h1{ max-width:22ch; }
 .hero-lp .hero-ctas{ margin-top:20px; }
-.hero-lp .lp-aviso{ margin:12px 0 0; }
+.hero-lp .hero-micro{ margin:10px 0 0; font-size:.84rem; opacity:.9; }
+.hero-lp .lp-aviso{ margin:8px 0 0; }
 .hero-lp .hero-stats{ margin:22px 0 18px; }
 .hero-lp .lead--long{ font-size:.95rem; margin:0; }
 @media(max-width:700px){
