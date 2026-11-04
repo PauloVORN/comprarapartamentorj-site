@@ -348,3 +348,7 @@ footer a.flink{ color:var(--gold-light); }
   .hero-lp h1{ font-size:1.6rem; max-width:none; margin-bottom:10px; }
   .hero-lp .lead{ font-size:.98rem; }
 }
+@media(max-width:340px){
+  .sticky-wa span{ display:none; }
+  .sticky-wa .btn{ flex:1; justify-content:center; }
+}
