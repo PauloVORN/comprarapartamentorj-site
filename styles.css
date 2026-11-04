@@ -276,14 +276,14 @@ img.corretora-avatar{ width:88px; height:88px; object-fit:cover; object-position
 
 /* ---------- Sticky WhatsApp bar (mobile) ---------- */
 .sticky-wa{
-  position:fixed; left:0; right:0; bottom:0; z-index:60; padding:10px 14px;
+  position:fixed; left:0; right:0; bottom:0; z-index:60; padding:10px 14px max(10px, env(safe-area-inset-bottom));
   background:rgba(8,26,43,.92); backdrop-filter:blur(6px); display:flex; gap:10px; align-items:center;
   box-shadow:0 -6px 20px rgba(0,0,0,.25);
 }
 .sticky-wa span{ color:#fff; font-size:.8rem; flex:1; }
 .sticky-wa .btn{ padding:12px 18px; font-size:.86rem; }
 @media(min-width:980px){ .sticky-wa{ display:none; } }
-body{ padding-bottom:68px; }
+body{ padding-bottom:calc(68px + env(safe-area-inset-bottom)); }
 @media(min-width:980px){ body{ padding-bottom:0; } }
 
 /* ---------- Footer ---------- */
@@ -335,3 +335,16 @@ footer a.flink{ color:var(--gold-light); }
 }
 .filtros button.is-on{ background:var(--navy-dark); border-color:var(--navy-dark); color:#fff; }
 .emp-card[hidden]{ display:none; }
+
+/* ---------- Landing Ilha Stay: botao principal antes da dobra no celular ---------- */
+.hero-lp h1{ max-width:22ch; }
+.hero-lp .hero-ctas{ margin-top:20px; }
+.hero-lp .lp-aviso{ margin:12px 0 0; }
+.hero-lp .hero-stats{ margin:22px 0 18px; }
+.hero-lp .lead--long{ font-size:.95rem; margin:0; }
+@media(max-width:700px){
+  .hero-lp{ padding:26px 0 32px; }
+  .hero-lp .badges{ margin-bottom:12px; }
+  .hero-lp h1{ font-size:1.6rem; max-width:none; margin-bottom:10px; }
+  .hero-lp .lead{ font-size:.98rem; }
+}
