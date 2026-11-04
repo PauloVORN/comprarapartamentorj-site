@@ -59,25 +59,6 @@
     }
   } catch (e) { /* sem Clarity: segue normal */ }
 
-  // Origem do visitante: quando vem de anúncio (utm_source ou gclid), a mensagem pré-preenchida
-  // do WhatsApp leva "(via google/campanha)" para a Crisla saber de onde o lead chegou.
-  try {
-    var qs = new URLSearchParams(window.location.search);
-    var origem = qs.get("utm_source") || (qs.get("gclid") ? "google" : "");
-    if (origem) {
-      var camp = qs.get("utm_campaign");
-      var tag = " (via " + origem + (camp ? "/" + camp : "") + ")";
-      document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
-        var u = new URL(a.href);
-        var t = u.searchParams.get("text");
-        if (t) {
-          u.searchParams.set("text", t + tag);
-          a.href = u.toString();
-        }
-      });
-    }
-  } catch (e) { /* sem origem: segue normal */ }
-
   // Dispara evento de conversão (GA4 / Google Ads) em todo clique de WhatsApp.
   document.querySelectorAll("[data-wa-cta]").forEach(function (link) {
     link.addEventListener("click", function () {
