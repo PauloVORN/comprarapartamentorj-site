@@ -7,6 +7,58 @@
     el.textContent = new Date().getFullYear();
   });
 
+  // Visitas da equipe: abrir o site uma vez com ?sem_rastreio=1 marca o aparelho e
+  // desliga as medições extras (rolagem e gravação de tela) neste navegador.
+  var semRastreio = false;
+  try {
+    if (new URLSearchParams(window.location.search).get("sem_rastreio") === "1") {
+      localStorage.setItem("sem_rastreio", "1");
+    }
+    semRastreio = localStorage.getItem("sem_rastreio") === "1";
+  } catch (e) { /* sem localStorage: segue normal */ }
+
+  // Rolagem: eventos por nome (rolagem_25/50/75/90) para ler direto em Relatórios > Eventos do GA4.
+  if (!semRastreio) {
+    var marcos = [25, 50, 75, 90], enviados = {}, aguardando = false;
+    var medirRolagem = function () {
+      aguardando = false;
+      var h = document.documentElement;
+      var total = h.scrollHeight - h.clientHeight;
+      if (total <= 0) return;
+      var pct = (window.pageYOffset / total) * 100;
+      marcos.forEach(function (m) {
+        if (pct >= m && !enviados[m]) {
+          enviados[m] = true;
+          if (typeof gtag === "function") {
+            gtag("event", "rolagem_" + m, { event_category: "engajamento", page_path: window.location.pathname });
+          }
+        }
+      });
+    };
+    window.addEventListener("scroll", function () {
+      if (!aguardando) { aguardando = true; window.requestAnimationFrame(medirRolagem); }
+    }, { passive: true });
+  }
+
+  // Microsoft Clarity (mapas de calor e gravações). Fica desligado enquanto o ID estiver vazio.
+  // Não carrega se o navegador sinaliza "não rastrear" e só começa depois da página pronta,
+  // para não pesar no carregamento.
+  var CLARITY_ID = "";
+  try {
+    var naoRastrear = navigator.doNotTrack === "1" || window.doNotTrack === "1" || navigator.globalPrivacyControl === true;
+    if (CLARITY_ID && !naoRastrear && !semRastreio) {
+      var iniciarClarity = function () {
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", CLARITY_ID);
+      };
+      if (document.readyState === "complete") setTimeout(iniciarClarity, 1500);
+      else window.addEventListener("load", function () { setTimeout(iniciarClarity, 1500); });
+    }
+  } catch (e) { /* sem Clarity: segue normal */ }
+
   // Origem do visitante: quando vem de anúncio (utm_source ou gclid), a mensagem pré-preenchida
   // do WhatsApp leva "(via google/campanha)" para a Crisla saber de onde o lead chegou.
   try {
