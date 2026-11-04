@@ -36,7 +36,7 @@
       });
     };
     window.addEventListener("scroll", function () {
-      if (!aguardando) { aguardando = true; window.requestAnimationFrame(medirRolagem); }
+      if (!aguardando) { aguardando = true; setTimeout(medirRolagem, 150); }
     }, { passive: true });
   }
 
