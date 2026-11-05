@@ -109,6 +109,7 @@ p{ margin:0 0 1em; color:var(--text-light); }
   position:absolute; inset:0; z-index:0;
   background-size:cover; background-position:center;
 }
+.hero-photo > img{ width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
 .hero-photo::after{
   content:""; position:absolute; inset:0;
   background:linear-gradient(180deg, rgba(8,26,43,.55) 0%, rgba(8,26,43,.88) 78%, var(--navy-dark) 100%);
