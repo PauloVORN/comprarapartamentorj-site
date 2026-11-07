@@ -370,3 +370,12 @@ footer a.flink{ color:var(--gold-light); }
 .lp-faq-cta p{ margin:0 0 16px; color:var(--text-light); }
 .lp-faq-cta-btns{ display:flex; flex-direction:column; gap:10px; align-items:stretch; }
 @media(min-width:520px){ .lp-faq-cta-btns{ flex-direction:row; justify-content:center; } }
+
+/* Landing Ilha Stay: fachada nítida no topo da hero (celular) e mais clara no desktop */
+@media(max-width:700px){
+  .hero-lp .hero-photo{ position:relative; inset:auto; height:clamp(190px,58vw,270px); margin:-26px 0 18px; }
+  .hero-lp .hero-photo::after{ background:linear-gradient(180deg, rgba(8,26,43,0) 62%, var(--navy-dark) 100%); }
+}
+@media(min-width:820px){
+  .hero-lp .hero-photo::after{ background:linear-gradient(100deg, rgba(8,26,43,.9) 34%, rgba(8,26,43,.45) 64%, rgba(8,26,43,.08) 100%); }
+}
