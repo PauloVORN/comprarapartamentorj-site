@@ -360,3 +360,13 @@ footer a.flink{ color:var(--gold-light); }
 .lp-lb[hidden]{ display:none; }
 .lp-lb img{ max-width:100%; max-height:74vh; width:auto; height:auto; object-fit:contain; border-radius:10px; background:#f3efe4; }
 .lp-lb-x{ position:absolute; top:10px; right:12px; width:44px; height:44px; border:0; border-radius:50%; background:rgba(255,255,255,.14); color:#fff; font-size:1.9rem; line-height:1; cursor:pointer; }
+
+/* Landing: ligar (contato quente) */
+.lp-ligar{ margin:14px 0 0; font-size:.92rem; color:var(--text-light); }
+.lp-ligar a{ color:var(--navy); font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+.corretora-box .btn-outline{ margin:8px 0 0 8px; }
+.lp-faq-cta{ margin-top:28px; padding:24px 20px; border-radius:16px; background:var(--white); box-shadow:var(--shadow-sm); text-align:center; }
+.lp-faq-cta h3{ margin:0 0 6px; }
+.lp-faq-cta p{ margin:0 0 16px; color:var(--text-light); }
+.lp-faq-cta-btns{ display:flex; flex-direction:column; gap:10px; align-items:stretch; }
+@media(min-width:520px){ .lp-faq-cta-btns{ flex-direction:row; justify-content:center; } }

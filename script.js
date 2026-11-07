@@ -77,6 +77,19 @@
     });
   });
 
+  // Toque em "Ligar": evento no GA4 (não conta como conversão do Ads de WhatsApp).
+  document.querySelectorAll("[data-call-cta]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (typeof gtag === "function") {
+        gtag("event", "ligacao_click", {
+          event_category: "lead",
+          event_label: link.getAttribute("data-call-cta"),
+          page_path: window.location.pathname,
+        });
+      }
+    });
+  });
+
   // Landing: toque em planta/foto amplia a imagem (planta traz botão de WhatsApp).
   var lb = document.querySelector("[data-lp-lb]");
   if (lb) {
