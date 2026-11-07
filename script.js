@@ -77,6 +77,28 @@
     });
   });
 
+  // Landing: toque em planta/foto amplia a imagem (planta traz botão de WhatsApp).
+  var lb = document.querySelector("[data-lp-lb]");
+  if (lb) {
+    var lbImg = lb.querySelector("[data-lp-lb-img]");
+    var lbWa = lb.querySelector("[data-lp-lb-wa]");
+    var fechaLb = function () { lb.hidden = true; document.body.style.overflow = ""; };
+    document.querySelectorAll(".galeria-item img, .lp-planta-img, .lp-faixa img").forEach(function (img) {
+      img.style.cursor = "zoom-in";
+      img.addEventListener("click", function () {
+        var msg = img.getAttribute("data-lb-wa");
+        lbImg.src = img.currentSrc || img.src;
+        lbImg.alt = img.alt;
+        if (msg) { lbWa.href = "https://wa.me/5521980541705?text=" + msg; lbWa.hidden = false; }
+        else { lbWa.hidden = true; }
+        lb.hidden = false;
+        document.body.style.overflow = "hidden";
+      });
+    });
+    lb.addEventListener("click", function (e) { if (e.target !== lbImg && !lbWa.contains(e.target)) fechaLb(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !lb.hidden) fechaLb(); });
+  }
+
   // Mede quem sai da landing para os outros lançamentos (indecisos).
   document.querySelectorAll("[data-lp-link]").forEach(function (link) {
     link.addEventListener("click", function () {
