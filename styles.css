@@ -379,3 +379,26 @@ footer a.flink{ color:var(--gold-light); }
 @media(min-width:820px){
   .hero-lp .hero-photo::after{ background:linear-gradient(100deg, rgba(8,26,43,.9) 34%, rgba(8,26,43,.45) 64%, rgba(8,26,43,.08) 100%); }
 }
+
+/* Perfil de comprador + condição Black (páginas de empreendimento) */
+.perfil-nota{ margin:14px 0 0; font-size:.88rem; color:var(--gold-light); font-weight:500; }
+.black-box{ margin:14px 0 4px; padding:14px 16px; max-width:540px; border:1px solid rgba(201,162,39,.55); background:rgba(201,162,39,.12); border-radius:var(--radius-sm); }
+.black-box .bb-t{ display:block; margin-bottom:8px; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; color:var(--gold-light); }
+.black-box ul{ list-style:none; margin:0; padding:0; }
+.black-box li{ position:relative; padding:3px 0 3px 22px; font-size:.92rem; color:#fff; }
+.black-box li::before{ content:"✓"; position:absolute; left:0; color:var(--gold-light); }
+.black-box small{ display:block; margin-top:8px; font-size:.72rem; color:#aebccb; }
+.perfil-grid{ display:grid; grid-template-columns:1fr; gap:12px; }
+@media (min-width:720px){ .perfil-grid{ grid-template-columns:1fr 1fr; } }
+.perfil-card{ background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow-sm); }
+.perfil-card h3{ font-size:1rem; margin-bottom:8px; }
+.perfil-card ul{ margin:0; padding-left:18px; font-size:.92rem; color:var(--text); }
+.perfil-card li{ margin:6px 0; }
+.perfil-card.no h3{ color:var(--text-light); }
+/* Páginas com perfil: botão e nota de renda logo abaixo do texto, números e Black depois */
+.hero-perfil .container{ display:flex; flex-direction:column; }
+.hero-perfil .hero-ctas{ order:1; }
+.hero-perfil .perfil-nota{ order:2; }
+.hero-perfil .hero-stats{ order:3; }
+.hero-perfil .black-box{ order:4; }
+.hero-perfil .container > p:last-child{ order:5; }
