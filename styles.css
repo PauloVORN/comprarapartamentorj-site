@@ -183,6 +183,9 @@ p{ margin:0 0 1em; color:var(--text-light); }
 .planta-card .m2 span{ font-size:.9rem; font-weight:500; color:var(--text-light); }
 .planta-card .preco{ font-size:.85rem; color:var(--text-light); }
 .planta-card .preco b{ color:var(--gold); font-size:1.02rem; }
+.planta-card .planta-link{ display:flex; flex-direction:column; gap:10px; color:inherit; text-decoration:none; }
+.planta-card .planta-cta{ font-size:.86rem; font-weight:600; color:var(--green-wa-dark); }
+.planta-card .planta-link:hover .planta-cta{ text-decoration:underline; }
 
 /* ---------- Região ---------- */
 .regiao-grid{ display:grid; grid-template-columns:1fr; gap:12px; }
