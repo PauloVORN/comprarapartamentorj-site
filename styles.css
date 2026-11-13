@@ -402,3 +402,11 @@ footer a.flink{ color:var(--gold-light); }
 .hero-perfil .hero-stats{ order:3; }
 .hero-perfil .black-box{ order:4; }
 .hero-perfil .container > p:last-child{ order:5; }
+
+/* Condições em resumo, logo abaixo do 1º botão (páginas anunciadas) */
+.cond-resumo{ margin:14px 0 0; padding:12px 14px; max-width:540px; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.07); border-radius:var(--radius-sm); }
+.cond-resumo .cr-t{ display:block; margin-bottom:4px; font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; color:var(--gold-light); }
+.cond-resumo .cr-row{ display:flex; gap:10px; padding:5px 0; border-top:1px solid rgba(255,255,255,.12); font-size:.9rem; line-height:1.35; }
+.cond-resumo .cr-k{ flex:0 0 74px; font-size:.78rem; color:#aebccb; padding-top:1px; }
+.cond-resumo .cr-v{ color:#fff; font-weight:500; }
+.hero-perfil .cond-resumo{ order:2; }
