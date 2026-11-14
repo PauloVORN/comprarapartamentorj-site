@@ -64,6 +64,15 @@
   ]
 }
 </script>
+<style>
+  /* Acabamento de acessibilidade (14/11/2026): contraste do dourado em fundo claro e titulos h3 equivalentes aos h4 antigos */
+  :root{ --gold-text:#7d6409; }
+  .section:not(#video) .eyebrow{ color:var(--gold-text); }
+  .planta-card .preco b{ color:var(--gold-text); }
+  .diff-card h3{ font-size:.92rem; margin-bottom:4px; }
+  .lp-steps .diff-card h3{ font-size:1rem; margin-bottom:6px; }
+  .regiao-item h3{ font-size:.85rem; text-transform:uppercase; letter-spacing:.04em; color:var(--gold-text); margin-bottom:6px; }
+</style>
 </head>
 <body>
 
@@ -87,6 +96,7 @@
   </div>
 </header>
 
+<main id="conteudo">
 <!-- HERO -->
 <section class="hero has-photo hero-lp">
   <div class="hero-photo" role="img" aria-label="Fachada do Ilha Stay Home Resort ao entardecer, na Barra Olímpica"><img src="../img/ilha-stay-hero-800.webp" srcset="../img/ilha-stay-hero-800.webp 800w, ../img/ilha-stay-hero.webp 1600w" sizes="100vw" alt="" width="1600" height="932" fetchpriority="high" decoding="async"></div>
@@ -137,22 +147,22 @@
     <div class="grid-diff">
       <div class="diff-card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
-        <h4>Ticket de entrada baixo</h4>
+        <h3>Ticket de entrada baixo</h3>
         <p>Sala e quarto de 28 m² a partir de R$ 299 mil* e entrada a partir de R$ 16 mil*, para começar a investir em um bairro em expansão.</p>
       </div>
       <div class="diff-card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
-        <h4>Estrutura de hotelaria</h4>
+        <h3>Estrutura de hotelaria</h3>
         <p>Lavanderia, mini mercado, coworking, spa e fechadura eletrônica nas unidades.</p>
       </div>
       <div class="diff-card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 10h16M10 4v16"/></svg></div>
-        <h4>Mall integrado</h4>
+        <h3>Mall integrado</h3>
         <p>11 lojas dentro do condomínio, com conveniência na porta de casa.</p>
       </div>
       <div class="diff-card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <h4>Gestão por parceira</h4>
+        <h3>Gestão por parceira</h3>
         <p>A Lobie, operadora de locação por temporada, é parceira do empreendimento e oferece gestão completa ao proprietário.</p>
       </div>
     </div>
@@ -252,10 +262,10 @@
     <h2>Apartamento perto do Parque Olímpico e do Parque Ilha Pura: também para casais e famílias pequenas</h2>
     <p class="lp-intro">Do sala e quarto à double suíte, são plantas compactas, com varanda, para quem quer morar com praticidade num bairro com mobilidade, escolas, saúde e comércio por perto.</p>
     <div class="regiao-grid">
-      <div class="regiao-item"><h4>Mobilidade</h4><p>BRT Olof Palme (1 min) · Transolímpica / Linha Amarela (5 min) · Metrô Jardim Oceânico, Linha 4 (10 min).</p></div>
-      <div class="regiao-item"><h4>Compras e lazer</h4><p>Shopping Metropolitano (7 min) · Barra Shopping (15 min) · Village Mall (15 min) · Parque Olímpico na região.</p></div>
-      <div class="regiao-item"><h4>Educação</h4><p>Colégio PH Ilha Pura (2 min) · Alfa CEM Bilíngue, Arena Olímpica (8 min) · Santo Agostinho Barra (10 min).</p></div>
-      <div class="regiao-item"><h4>Saúde</h4><p>Hospital Rio Barra (5 min) · Barra Medical Center (10 min) · Hospital Barra D'Or (15 min).</p></div>
+      <div class="regiao-item"><h3>Mobilidade</h3><p>BRT Olof Palme (1 min) · Transolímpica / Linha Amarela (5 min) · Metrô Jardim Oceânico, Linha 4 (10 min).</p></div>
+      <div class="regiao-item"><h3>Compras e lazer</h3><p>Shopping Metropolitano (7 min) · Barra Shopping (15 min) · Village Mall (15 min) · Parque Olímpico na região.</p></div>
+      <div class="regiao-item"><h3>Educação</h3><p>Colégio PH Ilha Pura (2 min) · Alfa CEM Bilíngue, Arena Olímpica (8 min) · Santo Agostinho Barra (10 min).</p></div>
+      <div class="regiao-item"><h3>Saúde</h3><p>Hospital Rio Barra (5 min) · Barra Medical Center (10 min) · Hospital Barra D'Or (15 min).</p></div>
     </div>
     <p class="lp-aviso lp-aviso--dark">*Tempos aproximados de carro, segundo a Riva Incorporadora. Endereço informado pela Riva: Praça Professora Heley Batista, s/n, Barra Olímpica, Rio de Janeiro.</p>
   </div>
@@ -272,9 +282,9 @@
     <span class="eyebrow">Como funciona</span>
     <h2>Do primeiro contato à compra, passo a passo</h2>
     <div class="grid-diff lp-steps">
-      <div class="diff-card"><h4>1. Você chama a Crisla</h4><p>Um toque no WhatsApp e você recebe plantas e informações do Ilha Stay.</p></div>
-      <div class="diff-card"><h4>2. Simulação com os seus números</h4><p>Ela apresenta sinal, parcelas da obra e as 120 parcelas pós-entrega para o seu caso, sem custo.</p></div>
-      <div class="diff-card"><h4>3. Você escolhe a sua unidade</h4><p>Com os números na mão, você escolhe a planta certa e a Crisla cuida de tudo até a entrega das chaves.</p></div>
+      <div class="diff-card"><h3>1. Você chama a Crisla</h3><p>Um toque no WhatsApp e você recebe plantas e informações do Ilha Stay.</p></div>
+      <div class="diff-card"><h3>2. Simulação com os seus números</h3><p>Ela apresenta sinal, parcelas da obra e as 120 parcelas pós-entrega para o seu caso, sem custo.</p></div>
+      <div class="diff-card"><h3>3. Você escolhe a sua unidade</h3><p>Com os números na mão, você escolhe a planta certa e a Crisla cuida de tudo até a entrega das chaves.</p></div>
     </div>
   </div>
 </section>
@@ -359,6 +369,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="container">
